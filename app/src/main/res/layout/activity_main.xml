@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    app:layout_behavior="@string/fab_transformation_scrim_behavior"
+    tools:context=".MainActivity"
+    android:id="@+id/layout_main">
+
+    <TextView
+        android:id="@+id/textMyNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/ubuntubold"
+        android:text="@string/my_notes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="8sp"
+        android:background="@drawable/background_search"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:layout_below="@+id/textMyNotes">
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_search"
+            app:tint="#DBDBDB" />
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:layout_marginStart="12sp"
+            android:background="@null"
+            android:fontFamily="@font/ubunturegular"
+            android:hint="@string/search_notes"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="#7B7B7B"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_add_button"
+
+
+        android:src="@drawable/ic_baseline_add_24"
+
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+
+        android:id="@+id/fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="40sp"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_marginEnd="30sp"-->
+<!--        android:background="@drawable/background_add_button"-->
+<!--        android:contentDescription="@string/app_name"-->
+<!--        android:padding="5sp"-->
+<!--        android:src="@drawable/ic_baseline_add_24"-->
+<!--        app:tint="#292929"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentEnd="true"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutSearch"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="40dp" />
+
+
+
+</RelativeLayout>

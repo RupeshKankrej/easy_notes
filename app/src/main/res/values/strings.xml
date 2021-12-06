@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Easy Notes App</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="title">Note Title</string>
+    <string name="description">Type Note here...</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="my_title">My Title</string>
+    <string name="my_long_long_long_description">My long long long description</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="update_note">Update Note</string>
+    <string name="my_notes">My Notes</string>
+    <string name="search_notes">Search Notes</string>
+</resources>
